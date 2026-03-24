@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/vergissberlin/railway/main/docs/railway-template.schema.json",
+  "schemaVersion": 1,
+  "project": "railwayapp-mongodb",
+  "repo": "vergissberlin/railwayapp-mongodb",
+  "displayName": "MongoDB",
+  "publishedCode": "mongodb-vb",
+  "image": "https://raw.githubusercontent.com/vergissberlin/railwayapp-mongodb/main/template-header.svg",
+  "description": "Run MongoDB 7 on Railway with official image and default port.",
+  "workspaceAutomation": false
+}
