@@ -14,8 +14,7 @@ Deploy MongoDB 7 on Railway with the official Docker image.
 
 ## Persistence
 
-Mount a Railway volume at `/data/db` for durable storage.
-This template currently has no `railway.toml`, so enforce this mount manually in Railway before production traffic.
+`railway.toml` declares `requiredMountPath = "/data/db"`. Attach a Railway volume to that path before production traffic — Railway will prompt for it based on this setting, but it is not created automatically.
 
 ## Local
 
