@@ -10,7 +10,19 @@ Deploy MongoDB 7 on Railway with the official Docker image.
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| None | — | Optional auth via `MONGO_INITDB_ROOT_USERNAME` / `MONGO_INITDB_ROOT_PASSWORD` |
+| `MONGO_INITDB_ROOT_USERNAME` | Yes | Root username created on first start of an empty volume. Set this in the Railway dashboard as a generated secret. |
+| `MONGO_INITDB_ROOT_PASSWORD` | Yes | Root password created on first start of an empty volume. Set this in the Railway dashboard as a generated secret. |
+
+Both variables must be set together before the first deployment — MongoDB only
+enables authentication and creates the root user on an empty data directory.
+Deploying without them leaves the database unauthenticated and reachable by
+anyone with network access to it. See [`.env.example`](./.env.example) for local development.
+
+## Health Check
+
+The image defines a `HEALTHCHECK` that runs `mongosh --eval "db.adminCommand('ping')"`
+every 30 seconds so container orchestrators (including Railway) can detect an
+unhealthy instance.
 
 ## Persistence
 
@@ -19,8 +31,9 @@ Deploy MongoDB 7 on Railway with the official Docker image.
 ## Local
 
 ```bash
+cp .env.example .env
 docker build -t railwayapp-mongodb .
-docker run --rm -p 27017:27017 railwayapp-mongodb
+docker run --rm -p 27017:27017 --env-file .env railwayapp-mongodb
 ```
 
 <!-- footer -->
