@@ -6,6 +6,15 @@ Deploy MongoDB 7 on Railway with the official Docker image.
 
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/mongodb-vb?referralCode=2_sIT9&utm_medium=integration&utm_source=template&utm_campaign=generic)
 
+## 🏗️ Architecture
+
+```mermaid
+flowchart LR
+    Client(["📦 App / Client"]) -->|"MongoDB Wire Protocol"| Proxy["Railway TCP Proxy"]
+    Proxy -->|"$PORT → 27017"| App["Container\nmongo:7"]
+    App --> Volume[("Volume\n/data/db")]
+```
+
 ## Environment
 
 | Variable | Required | Description |
