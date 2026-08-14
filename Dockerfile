@@ -1,4 +1,4 @@
-FROM mongo:7
+FROM mongo:8
 
 # curl + gzip for the optional first-init dump import (MONGO_INIT_DUMP_URL) -
 # mongo:7 is ubuntu:jammy based and ships neither by default. gzip is used
