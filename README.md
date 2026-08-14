@@ -27,6 +27,16 @@ enables authentication and creates the root user on an empty data directory.
 Deploying without them leaves the database unauthenticated and reachable by
 anyone with network access to it. See [`.env.example`](./.env.example) for local development.
 
+## Optional
+
+| Variable | Description |
+|----------|-------------|
+| `MONGO_INIT_DUMP_URL` | HTTPS URL to a `mongorestore`-compatible single-file archive (`mongodump --archive[--gzip]` output, **not** a `mongodump --out` directory tree); downloaded and restored via `mongorestore --archive --drop` automatically, but only on the first start of an empty volume. Takes precedence over `MONGO_INIT_DUMP_BASE64` if both are set. |
+| `MONGO_INIT_DUMP_BASE64` | Same archive, base64-encoded and pasted directly as the variable value. Ignored if `MONGO_INIT_DUMP_URL` is also set. Best for small dumps only. |
+
+> [!NOTE]
+> `MONGO_INIT_DUMP_URL`/`MONGO_INIT_DUMP_BASE64` are only ever consulted on the very first start against a brand-new, empty volume. Once the database has initialized, both variables are silently ignored on every later restart or redeploy — even if you leave them set. The restore runs with full administrative privileges during bootstrap, so only point these at dumps from sources you trust.
+
 ## Health Check
 
 The image defines a `HEALTHCHECK` that runs `mongosh --eval "db.adminCommand('ping')"`
