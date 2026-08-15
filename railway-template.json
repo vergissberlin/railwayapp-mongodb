@@ -5,7 +5,8 @@
   "repo": "vergissberlin/railwayapp-mongodb",
   "displayName": "MongoDB",
   "publishedCode": "mongodb-vb",
-  "image": "https://raw.githubusercontent.com/vergissberlin/railwayapp-mongodb/main/template-header.svg",
+  "image": "https://raw.githubusercontent.com/vergissberlin/railwayapp-mongodb/main/logo-mongodb.svg",
   "description": "Run MongoDB 7 on Railway with official image and default port.",
-  "workspaceAutomation": false
+  "workspaceAutomation": false,
+  "logoFile": "logo-mongodb.svg"
 }
