@@ -4,7 +4,7 @@
 
 Deploy MongoDB 7 on Railway with the official Docker image.
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/mongodb-vb?referralCode=2_sIT9&utm_medium=integration&utm_source=template&utm_campaign=generic)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/mongodb-1?referralCode=2_sIT9&utm_medium=integration&utm_source=template&utm_campaign=generic)
 
 ## 🏗️ Architecture
 
@@ -54,6 +54,10 @@ cp .env.example .env
 docker build -t railwayapp-mongodb .
 docker run --rm -p 27017:27017 --env-file .env railwayapp-mongodb
 ```
+
+## 💬 Support
+
+Questions or feedback? Visit the [template forum on Railway Central Station](https://station.railway.com/templates/mongo-db-d9902a5d).
 
 <!-- footer -->
 ---
