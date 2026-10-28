@@ -4,7 +4,7 @@
 
 Deploy MongoDB 7 on Railway with the official Docker image.
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/mongodb-vb?referralCode=2_sIT9&utm_medium=integration&utm_source=template&utm_campaign=generic)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/mongodb-1?referralCode=2_sIT9&utm_medium=integration&utm_source=template&utm_campaign=generic)
 
 ## 🏗️ Architecture
 
