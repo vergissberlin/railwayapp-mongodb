@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.2.2](https://github.com/vergissberlin/railwayapp-mongodb/compare/v0.2.1...v0.2.2) (2026-10-28)
+
+
+### Bug Fixes
+
+* **docker:** pin mongo to 9.0.4 ([#17](https://github.com/vergissberlin/railwayapp-mongodb/issues/17)) ([94e770b](https://github.com/vergissberlin/railwayapp-mongodb/commit/94e770b5fd85ad40397d93cc594eb00779a763cd))
+
+
+### Documentation
+
+* fix Railway deploy button link and add template forum link ([#15](https://github.com/vergissberlin/railwayapp-mongodb/issues/15)) ([2270cfb](https://github.com/vergissberlin/railwayapp-mongodb/commit/2270cfb8d9bead78c4e6b6988b9c143d5a013da3))
+
+
+### Chores
+
+* **deps:** update mongo docker tag to v9 ([#14](https://github.com/vergissberlin/railwayapp-mongodb/issues/14)) ([9bd8d16](https://github.com/vergissberlin/railwayapp-mongodb/commit/9bd8d160501f76ef6ac36a0e50abd2fb4d7759b5))
+
 ## [0.2.1](https://github.com/vergissberlin/railwayapp-mongodb/compare/v0.2.0...v0.2.1) (2026-08-20)
 
 
